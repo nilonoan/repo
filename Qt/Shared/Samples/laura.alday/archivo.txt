@@ -1,1 +1,9 @@
-hola mundo
+------
+
+
+testeando beyond compare con git para hacer diffs
+
+.
+.
+.
+.
