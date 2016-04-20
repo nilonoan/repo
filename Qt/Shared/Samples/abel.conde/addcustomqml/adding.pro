@@ -11,3 +11,4 @@ RESOURCES += adding.qrc
 
 target.path = $$[QT_INSTALL_EXAMPLES]/qml/referenceexamples/adding
 INSTALLS += target
+
