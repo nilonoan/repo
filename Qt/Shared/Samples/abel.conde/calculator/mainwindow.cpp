@@ -19,3 +19,4 @@ void MainWindow::btnOpen_Clicked()
     ValForm = new ValidationForm;
     ValForm->show();
 }
+

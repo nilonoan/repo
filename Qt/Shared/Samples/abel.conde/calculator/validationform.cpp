@@ -122,3 +122,4 @@ void ValidationForm::btnClose_Clicked()
 {
     close();
 }
+
