@@ -6,27 +6,29 @@ ApplicationWindow {
     visible: true
     width: 640
     height: 480
-    title: qsTr("Hello World")
-
-    menuBar: MenuBar {
-        Menu {
-            title: qsTr("File")
-            MenuItem {
-                text: qsTr("&Open")
-                onTriggered: console.log("Open action triggered");
-            }
-            MenuItem {
-                text: qsTr("Exit")
-                onTriggered: Qt.quit();
-            }
-        }
-    }
+    title: qsTr("Image Plugin")
 
     Label {
-        text: qsTr("Hello World")
-        anchors.centerIn: parent
+        text: qsTr("Image Plugin")
+        anchors.left: parent.left
+        anchors.leftMargin: 300
+        anchors.top: sarasa.top
+        anchors.topMargin: 300
+        transformOrigin: Item.Center
+
     }
+
+
     MyItem {
         id: sarasa
+        anchors.left: parent.left
+        anchors.leftMargin: 0
+        anchors.top: parent.top
+        anchors.topMargin: 0
+	//replace this path with the path to any image
+        imageLocation: "C:\\Users\\laura.e.lucas.alday\\Documents\\testPlugins\\MyUtilities\\img\\flor.jpg"
     }
+
+
+
 }
