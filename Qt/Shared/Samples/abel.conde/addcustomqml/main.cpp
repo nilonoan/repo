@@ -33,6 +33,12 @@ int main(int argc, char ** argv)
     item->personAdd(item->personCreate("[ new ] John Simpson", 90, 1.70, "Blonde"));
     item->personAdd(item->personCreate("[ new ] Lero Jaret", 84, 1.80, "White"));
 
+    item->personRemove(0);
+
+    item->personRemove(item->personCount() - 1);
+    item->personRemove(item->personCount() - 1);
+    item->personRemove(item->personCount() - 1);
+
     for (ii = 0; ii < item->personCount(); ++ ii)
     {
         qDebug() << "::::::Person::::::";

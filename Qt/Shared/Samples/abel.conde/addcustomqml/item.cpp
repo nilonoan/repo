@@ -36,6 +36,11 @@ void Item::personAdd(Person *ob)
     m_persons.append(ob);
 }
 
+void Item::personRemove(int index)
+{
+    m_persons.removeAt(index);
+}
+
 QQmlListProperty<Car> Item::cars()
 {
     return QQmlListProperty<Car>(this, m_cars);
@@ -54,6 +59,11 @@ Car *Item::car(int index) const
 void Item::carAdd(Car *ob)
 {
     m_cars.append(ob);
+}
+
+void Item::carRemove(int index)
+{
+    m_cars.removeAt(index);
 }
 
 Car *Item::carCreate(QString color, QString model, int amount_doors)

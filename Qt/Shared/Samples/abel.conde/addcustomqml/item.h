@@ -25,6 +25,7 @@ public:
 
     QQmlListProperty<Person> persons();
     void personAdd(Person *);
+    void personRemove(int);
     Person *personCreate(QString, int, float, QString);
 
     int personCount() const;
@@ -32,6 +33,7 @@ public:
 
     QQmlListProperty<Car> cars();
     void carAdd(Car *);
+    void carRemove(int);
     Car *carCreate(QString, QString, int);
 
     int carCount() const;
