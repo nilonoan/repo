@@ -5,31 +5,35 @@ import Common 1.0
 Item {
     persons: [
         Person {
-            name: "Jesica Clark"
+            name: "[qml] Jesica Clark"
             color_hair: "Red"
+            weight: 70
+            height: 1.87
         },
 
         Person {
-            name: "John Wesser"
+            name: "[qml] John Wesser"
             color_hair: "White"
+            weight: 89
+            height: 1.89
         }
     ]
 
     cars: [
         Car {
-            color: "Gray"
+            color: "[qml] Gray"
             model: "Audi"
             amount_doors: 4
         },
 
         Car {
-            color: "Red"
+            color: "[qml] Red"
             model: "Fiat"
             amount_doors: 4
         },
 
         Car {
-            color: "Red"
+            color: "[qml] Red"
             model: "Fiat"
             amount_doors: 2
         }
@@ -37,4 +41,3 @@ Item {
 }
 
 // ![0]
-

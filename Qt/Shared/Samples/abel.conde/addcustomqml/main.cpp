@@ -26,14 +26,20 @@ int main(int argc, char ** argv)
     qDebug() << "/////////////////////////////";
     qDebug() << "";
 
-    qDebug() << "Printing Persons.....";
+    qDebug() << "Printing Persons from QML and C++.....";
     qDebug() << "";
+
+    item->personAdd(item->personCreate("[ new ] Jean Leno", 98, 1.77, "Black"));
+    item->personAdd(item->personCreate("[ new ] John Simpson", 90, 1.70, "Blonde"));
+    item->personAdd(item->personCreate("[ new ] Lero Jaret", 84, 1.80, "White"));
 
     for (ii = 0; ii < item->personCount(); ++ ii)
     {
         qDebug() << "::::::Person::::::";
         qDebug() << "";
         qDebug() << "Name: " << item->person(ii)->name();
+        qDebug() << "Weight: " << item->person(ii)->weight();
+        qDebug() << "Height: " << item->person(ii)->height();
         qDebug() << "Color Hair: " << item->person(ii)->color_hair();
         qDebug() << "";
         qDebug() << "::::::::::::::::::";
@@ -42,8 +48,11 @@ int main(int argc, char ** argv)
 
     qDebug() << "";
     qDebug() << "";
-    qDebug() << "Printing Cars.....";
+    qDebug() << "Printing Cars from QML and C++.....";
     qDebug() << "";
+
+    item->carAdd(item->carCreate("[ new ] Blue", "Peugot", 4));
+    item->carAdd(item->carCreate("[ new ] Yellow", "Fiat", 2));
 
     for (ii = 0; ii < item->carCount(); ++ii)
     {
@@ -64,4 +73,3 @@ int main(int argc, char ** argv)
 
     return app.exec();
 }
-

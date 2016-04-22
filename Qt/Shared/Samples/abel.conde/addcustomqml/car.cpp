@@ -33,4 +33,3 @@ void Car::setAmountDoors(const int &n)
 {
     m_amount_doors = n;
 }
-

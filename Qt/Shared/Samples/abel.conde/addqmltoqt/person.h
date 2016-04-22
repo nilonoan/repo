@@ -26,6 +26,8 @@ public:
     QString color_hair() const;
     void setColorHair(const QString &);
 
+signals:
+
 private:
     QString m_name;
     float m_height;

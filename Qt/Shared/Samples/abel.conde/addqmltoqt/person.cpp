@@ -43,3 +43,4 @@ void Person::setColorHair(const QString &n)
 {
     m_color_hair = n;
 }
+

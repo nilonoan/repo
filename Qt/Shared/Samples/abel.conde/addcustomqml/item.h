@@ -24,10 +24,16 @@ public:
     explicit Item(QObject *parent = 0);
 
     QQmlListProperty<Person> persons();
+    void personAdd(Person *);
+    Person *personCreate(QString, int, float, QString);
+
     int personCount() const;
     Person *person(int) const;
 
     QQmlListProperty<Car> cars();
+    void carAdd(Car *);
+    Car *carCreate(QString, QString, int);
+
     int carCount() const;
     Car *car(int) const;
 
@@ -42,4 +48,3 @@ private:
 // ![3]
 
 #endif // ITEM_H
-

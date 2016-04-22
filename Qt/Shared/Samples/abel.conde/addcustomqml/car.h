@@ -11,7 +11,7 @@ class Car : public QObject
     Q_PROPERTY(int amount_doors READ amount_doors WRITE setAmountDoors)
 
 public:
-    explicit Car(QObject *parent = 0);    
+    Car(QObject *parent = 0);
 
     QString color() const;
     void setColor(const QString &);
@@ -32,4 +32,3 @@ private:
 };
 
 #endif // CAR_H
-
