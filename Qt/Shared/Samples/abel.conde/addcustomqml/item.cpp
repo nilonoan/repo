@@ -36,6 +36,14 @@ void Item::personAdd(Person *ob)
     m_persons.append(ob);
 }
 
+void Item::personUpdate(int index, Person *ob)
+{
+    m_persons.at(index)->setName(ob->name());
+    m_persons.at(index)->setWeight(ob->weight());
+    m_persons.at(index)->setHeight(ob->height());
+    m_persons.at(index)->setColorHair(ob->color_hair());
+}
+
 void Item::personRemove(int index)
 {
     m_persons.removeAt(index);
@@ -59,6 +67,13 @@ Car *Item::car(int index) const
 void Item::carAdd(Car *ob)
 {
     m_cars.append(ob);
+}
+
+void Item::carUpdate(int index, Car *ob)
+{
+    m_cars.at(index)->setColor(ob->color());
+    m_cars.at(index)->setModel(ob->model());
+    m_cars.at(index)->setAmountDoors(ob->amount_doors());
 }
 
 void Item::carRemove(int index)

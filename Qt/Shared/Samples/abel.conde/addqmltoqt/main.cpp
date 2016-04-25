@@ -5,6 +5,7 @@
 #include <QQmlComponent>
 #include <QQmlProperty>
 #include <QSurfaceFormat>
+#include <QObject>
 #include <QDebug>
 
 #include "window.h"
@@ -31,12 +32,15 @@ int main(int argc, char *argv[])
         persona->setProperty("name", "Blanco");
 
     //these three lines are simply to show that we can change the text value
-    //of this
+    //of this (comment or uncomment these lines to see that we can change any
+    //property in the qml from c++ code
+    /*
     QObject *label = appWindow->findChild<QObject*>("label");
     if (label)
-        label->setProperty("text", QString("Ramon"));
+        label->setProperty("text", QString("Ramon (changed from c++ code)"));
+    */
 
-    QQuickWindow *window = qobject_cast<QQuickWindow *>(topLevel);
+    QQuickWindow *window = qobject_cast<QQuickWindow *>(appWindow);
     QSurfaceFormat surfaceFormat = window->requestedFormat();
     window->setFormat(surfaceFormat);
     window->show();

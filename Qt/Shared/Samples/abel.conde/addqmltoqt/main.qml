@@ -32,8 +32,19 @@ ApplicationWindow {
     }
 
     Label {
-        text: qsTr(person1.name)
+        id: label1
+        text: qsTr(person1.name) + qsTr(" (value taken from same qml file)")
         anchors.centerIn: parent
         objectName: "label"
+    }
+
+    Button {
+        id: button1
+        text: qsTr("Change label")
+        anchors.top: parent
+        objectName: "button"
+        onClicked: {
+            label1.text = qsTr("Pedro (changed from qml file)")
+        }
     }
 }

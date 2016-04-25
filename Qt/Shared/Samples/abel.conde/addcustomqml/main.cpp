@@ -34,10 +34,10 @@ int main(int argc, char ** argv)
     item->personAdd(item->personCreate("[ new ] Lero Jaret", 84, 1.80, "White"));
 
     item->personRemove(0);
+    item->personRemove(item->personCount() - 1);
+    item->personRemove(item->personCount() - 1);
 
-    item->personRemove(item->personCount() - 1);
-    item->personRemove(item->personCount() - 1);
-    item->personRemove(item->personCount() - 1);
+    item->personUpdate(0, item->personCreate("[qml][updated] John Wesser", 89, 1.89, "White"));
 
     for (ii = 0; ii < item->personCount(); ++ ii)
     {
@@ -59,6 +59,11 @@ int main(int argc, char ** argv)
 
     item->carAdd(item->carCreate("[ new ] Blue", "Peugot", 4));
     item->carAdd(item->carCreate("[ new ] Yellow", "Fiat", 2));
+
+    item->carRemove(0);
+    item->carRemove(item->carCount() - 1);
+
+    item->carUpdate(0, item->carCreate("[qml][updated] Red", "Fiat", 4));
 
     for (ii = 0; ii < item->carCount(); ++ii)
     {
