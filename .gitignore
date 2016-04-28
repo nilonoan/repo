@@ -1,2 +1,2 @@
-/build-*-Debug/
-/build-*-Release/
+**/build-*-Debug/**
+**/build-*-Release/**
