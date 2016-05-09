@@ -3,7 +3,11 @@
 ***********************************************************************************
 example about how to call this bash file:
 
-./gitdiff.sh /p/Users/conde/git/chile diff.loto3.txt -options="text:auto-generated|folder:build-IMTSProject-Desktop_Qt_5_3_GCC_32bit-Debug,build-IMTSProjectCH-Desktop_Qt_5_3_GCC_32bit-Debug|ext:json~,pri~,docx,db,png,jpg,pro.user,pro.user.b1d8dfe,qmlproject.user,pri,dat|pathname:NVRAM/data_img1,IMTSScriptTools/CreateDBusAdaptorAndInterfaceClasses" > loto3.clean.txt
+previously, we should execute the command git diff
+git diff --name-only <id commit 1> <id commit 2> > diff.txt
+
+then we can execute this bash file
+./gitdiff.sh /p/Users/conde/git/chile diff.txt -options="text:auto-generated|folder:build-IMTSProject-Desktop_Qt_5_3_GCC_32bit-Debug,build-IMTSProjectCH-Desktop_Qt_5_3_GCC_32bit-Debug|ext:json~,pri~,docx,db,png,jpg,pro.user,pro.user.b1d8dfe,qmlproject.user,pri,dat|pathname:NVRAM/data_img1,IMTSScriptTools/CreateDBusAdaptorAndInterfaceClasses" > clean.output.txt
 
 ***********************************************************************************
 '
