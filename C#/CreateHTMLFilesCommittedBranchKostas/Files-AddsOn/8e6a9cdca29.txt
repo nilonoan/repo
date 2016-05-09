@@ -1,0 +1,13 @@
+IMTSDev/IMTSResources/CH/Qml/IMTSQml.qmlproject.user
+IMTSDev/src/IMTSProjectCH/IMTSProjectCH.pro.user
+IMTSDev/src/IMTSProjectDevCH/IMTSLibraries/IMTSGamesGuiLibrary/Multiplier/MultiplierUiCH.cpp
+IMTSDev/src/IMTSProjectDevCH/IMTSLibraries/IMTSGamesGuiLibrary/PanelX/PanelXUi.cpp
+IMTSDev/src/IMTSProjectDevCH/IMTSLibraries/IMTSGamesUtilitiesLibrary/CheckCoupon/CouponUtilities.cpp
+IMTSDev/src/IMTSProjectDevCH/IMTSLibraries/IMTSGamesUtilitiesLibrary/GamesCore/GamesLogic.cpp
+IMTSDev/src/IMTSProjectDevCH/IMTSLibraries/IMTSGamesUtilitiesLibrary/GamesData/Area.cpp
+IMTSDev/src/IMTSProjectDevCH/IMTSProject.pro.user
+IMTSDev/src/build-IMTSProject-Desktop_Qt_5_3_GCC_32bit-Debug/IMTSLibraries/IMTSGamesGuiLibrary/MultiplierUiCH.o
+IMTSDev/src/build-IMTSProject-Desktop_Qt_5_3_GCC_32bit-Debug/IMTSLibraries/IMTSGamesGuiLibrary/PanelXUi.o
+IMTSDev/src/build-IMTSProject-Desktop_Qt_5_3_GCC_32bit-Debug/IMTSLibraries/IMTSGamesUtilitiesLibrary/Area.o
+IMTSDev/src/build-IMTSProject-Desktop_Qt_5_3_GCC_32bit-Debug/IMTSLibraries/IMTSGamesUtilitiesLibrary/CouponUtilities.o
+IMTSDev/src/build-IMTSProject-Desktop_Qt_5_3_GCC_32bit-Debug/IMTSLibraries/IMTSGamesUtilitiesLibrary/GamesLogic.o

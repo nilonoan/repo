@@ -1,0 +1,10 @@
+IMTSDev/IMTSResources/CH/JsonFiles/Config/Games/2181_2082CR.json
+IMTSDev/IMTSResources/CH/JsonFiles/Config/Games/2181_2082CR.json~
+IMTSDev/IMTSResources/CH/Qml/IMTSQml.qmlproject.user
+IMTSDev/src/IMTSProjectCH/IMTSGui/Games/GamesUi.cpp
+IMTSDev/src/IMTSProjectCH/IMTSProjectCH.pro.user
+IMTSDev/src/IMTSProjectDevCH/IMTSLibraries/IMTSGamesGuiLibrary/PickXPlayType/PickXPlayTypeUi.cpp
+IMTSDev/src/IMTSProjectDevCH/IMTSProject.pro.user
+IMTSDev/src/build-IMTSProject-Desktop_Qt_5_3_GCC_32bit-Debug/IMTSLibraries/IMTSGamesGuiLibrary/PickXPlayTypeUi.o
+IMTSDev/src/build-IMTSProjectCH-Desktop_Qt_5_3_GCC_32bit-Debug/IMTSGui/Games/GamesUi.o
+IMTSDev/src/build-IMTSProjectCH-Desktop_Qt_5_3_GCC_32bit-Debug/IMTSGui/Games/IMTSGames
