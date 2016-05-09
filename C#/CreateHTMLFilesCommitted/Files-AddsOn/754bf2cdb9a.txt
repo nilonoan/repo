@@ -1,0 +1,9 @@
+IMTSDev/IMTSResources/CH/JsonFiles/Config/Games/2181_2082CR.json
+IMTSDev/IMTSResources/CH/JsonFiles/Config/Games/2181_2082CR.json~
+IMTSDev/IMTSResources/CH/Qml/Games/GamesComponents/MultiDraws/MultiDrawNumber.qml
+IMTSDev/IMTSResources/CH/Qml/Games/GamesComponents/MultiDraws/MultiDrawsContainer.qml
+IMTSDev/IMTSResources/CH/Qml/Games/GamesComponents/Panels/PanelContainer.qml
+IMTSDev/IMTSResources/CH/Qml/Games/GamesMainScreen/Loto3.qml
+IMTSDev/IMTSResources/CH/Qml/IMTSQml.qmlproject.user
+IMTSDev/src/IMTSProjectCH/IMTSProjectCH.pro.user
+IMTSDev/src/IMTSProjectDevCH/IMTSProject.pro.user
