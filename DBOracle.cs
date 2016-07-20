@@ -57,22 +57,24 @@ namespace AlertingUI
         			password = "LOTOSDB";
         			server = "10.71.142.246";
         			sid = "L10FAT";
-					port = "1521"
+					port = "1521";					
         			break;
         		case "LOTOSAUTH":
         			user = "LOTOSAUTH";
         			password = "LOTOSAUTH";
         			server = "10.71.142.246";
         			sid = "L10FAT";
-					port = "1521"
+					port = "1521";
         			break;
 				default:
 					databasename = "unknown";
 					break;
         	}
 
+        	dbname = databasename;
+        	
             string oradb = "Data Source=(DESCRIPTION="
-			+ "(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=%%HOST%%)(PORT=%%PORT%%))"
+			+ "(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=%%HOST%%)(PORT=%%PORT%%)))"
 			+ "(CONNECT_DATA=(SID=%%SID%%)));"
 			+ "User Id=%%USERID%%;Password=%%PASSWORD%%;";
             

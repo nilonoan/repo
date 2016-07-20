@@ -18,6 +18,8 @@ using Ranorex;
 using Ranorex.Core;
 using Ranorex.Core.Testing;
 
+using System.Data.OracleClient;
+
 namespace AlertingUI
 {
     /// <summary>
@@ -52,7 +54,7 @@ namespace AlertingUI
             
             DBOraclePlSql plsql = new DBOraclePlSql();
             plsql.Connection = connection;
-            plsql.Script = script.getCleanUp_ALT_QUERY();
+            plsql.Script = script.getCleanUp("ALT_QUERY");
             plsql.Execute();
             
             connection.Close();
