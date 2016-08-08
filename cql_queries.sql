@@ -44,3 +44,5 @@ do
 done
 IFS=$SAVEIFS 
 
+select date, hour, auditlevel, toTimestamp(time) from auditing.user_configuration_change
+where date = '2016.07.25' and hour = 17 and auditlevel = 'Medium' limit 10 allow filtering;
