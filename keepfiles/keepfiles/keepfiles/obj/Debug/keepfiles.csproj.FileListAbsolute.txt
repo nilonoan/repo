@@ -1,4 +1,0 @@
-P:\Users\conde\Downloads\keepfiles\keepfiles\keepfiles\bin\Debug\keepfiles.exe
-P:\Users\conde\Downloads\keepfiles\keepfiles\keepfiles\bin\Debug\keepfiles.pdb
-P:\Users\conde\Downloads\keepfiles\keepfiles\keepfiles\obj\Debug\keepfiles.exe
-P:\Users\conde\Downloads\keepfiles\keepfiles\keepfiles\obj\Debug\keepfiles.pdb
