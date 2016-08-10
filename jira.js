@@ -3,6 +3,14 @@ var ForWriting = 2;
 
 var WebPage = "jira.html";
 
+var sUserNameStartTag = "<!-- START:OS_USERNAME FIELD -->";
+var sUserNameEndTag = "<!-- END:OS_USERNAME FIELD -->";
+var sPasswordStartTag = "<!-- START:OS_PASSWORD FIELD -->";
+var sPasswordEndTag = "<!-- END:OS_PASSWORD FIELD -->";
+
+var sUserNameField = "<input class=\"text medium-field\" id=\"login-form-username\" name=\"os_username\" type=\"text\" value=\"VALUE_HERE\" />";
+var	sPasswordField = "<input id=\"login-form-password\" class=\"text medium-field\" name=\"os_password\" type=\"password\" value=\"VALUE_HERE\" />";
+	
 var SleepProcess = 3000;
 var SleepWholeProcess = 30000;
 
@@ -18,13 +26,32 @@ function doTask() {
 	var oFso = new ActiveXObject("Scripting.FileSystemObject");
 	
 	var f = oFso.OpenTextFile(WebPage, ForReading);
-	content = f.ReadAll();
+	var sContent = f.ReadAll();
 	f.Close();
+	
 	f = null
 
+	var nStartStr = sContent.indexOf(sUserNameStartTag);
+	var nEndStr = sContent.indexOf(sUserNameEndTag);
+	var nLenStartStr = sUserNameStartTag.length;
+	var nLen = sContent.indexOf("/>", nStartStr + nLenStartStr) + "/>".length - (nStartStr + nLenStartStr);
+
+	var sUserName = sContent.substring(nStartStr + nLenStartStr, nStartStr + nLenStartStr + nLen);
+
+	nStartStr = sContent.indexOf(sPasswordStartTag);
+	nEndStr = sContent.indexOf(sPasswordEndTag);
+	nLenStartStr = sPasswordStartTag.length;
+	nLen = sContent.indexOf("/>", nStartStr + nLenStartStr) + "/>".length - (nStartStr + nLenStartStr);
+	
+	var sPassword = sContent.substring(nStartStr + nLenStartStr, nStartStr + nLenStartStr + nLen);	
+	
+	sContent = sContent.replace(RegExp(sUserName, "g"), sUserNameField.replace(/VALUE_HERE/g, oArgs(UserParam))); 
+	sContent = sContent.replace(RegExp(sPassword, "g"), sPasswordField.replace(/VALUE_HERE/g, oArgs(PwdParam)));
+	
 	f = oFso.OpenTextFile(WebPage, ForWriting, true);
-	f.Write(content.replace(/\[\[OS_USERNAME\]\]/g, oArgs(UserParam)).replace(/\[\[OS_PASSWORD\]\]/g, oArgs(PwdParam)));
+	f.Write(sContent);	
 	f.close();
+	
 	f = null;
 	
 	oShell.Run("taskkill /im firefox.exe", 0, true);
@@ -48,13 +75,9 @@ while(true) {
 	};
 
 	if (oTime["hours"] == oArgs(HourParam) && oTime["minutes"] == oArgs(MinuteParam)) {
-		WScript.Echo("run doTask()");
 		doTask();
 		WScript.Sleep(SleepWholeProcess * 2);
 	}
-	
-	WScript.Echo(oTime["hours"]);
-	WScript.Echo(oTime["minutes"]);
 	
 	WScript.Sleep(SleepWholeProcess);
 	oDate = null;

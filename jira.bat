@@ -1,13 +1,13 @@
-@ECHO ON
+@ECHO OFF
 
 REM We set our user and password to log in to jira
 SET USER=conde
-SET PASSWORD=123456@
+SET PASSWORD=123456q@
 
 REM We set the time when we want to trigger this script
-SET HOUR=15
-SET MINUTE=34
+SET HOUR=18
+SET MINUTE=16
 
 REM We call javascript file
-cscript jira.js %USER% %PASSWORD% %HOUR% %MINUTE%
+cscript jira.js "%USER%" "%PASSWORD%" "%HOUR%" "%MINUTE%"
 pause
