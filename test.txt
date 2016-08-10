@@ -24,3 +24,6 @@ oShell.Run "taskkill /im notepad.exe", , True
 Set ff = CreateObject("WScript.Shell").Exec("firefox")
 'you do stuff
 ff.Terminate}
+
+
+powershell -Command "(gc myFile.txt) -replace 'foo', 'bar' | Out-File myFile.txt"
