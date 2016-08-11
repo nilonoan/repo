@@ -18,6 +18,7 @@ var UserParam = 0;
 var PwdParam = 1;
 var HourParam = 2;
 var MinuteParam = 3;
+var AppNavigatorParam = 4;
 
 var oArgs = WScript.Arguments;
 
@@ -54,12 +55,12 @@ function doTask() {
 	
 	f = null;
 	
-	oShell.Run("taskkill /im firefox.exe", 0, true);
+	oShell.Run("taskkill /im " + oArgs(AppNavigatorParam) + ".exe /f", 0, true);
 
 	WScript.Sleep(SleepProcess);
 
 	var sCurDir = oShell.CurrentDirectory;
-	oShell.Run("firefox file:///" + sCurDir.replace(/\\/g, '/') + "/" + WebPage);
+	oShell.Run(oArgs(AppNavigatorParam) + " file:///" + sCurDir.replace(/\\/g, '/') + "/" + WebPage);
 }
 
 var oTime = null;
