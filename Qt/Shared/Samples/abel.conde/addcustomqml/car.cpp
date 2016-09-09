@@ -1,7 +1,7 @@
 #include "car.h"
 
 Car::Car(QObject *parent) : QObject(parent)
-{ //meomoe memo memo meoooooo
+{ //9999999999
 }
 
 QString Car::color() const
